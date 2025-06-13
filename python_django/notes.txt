@@ -1,0 +1,26 @@
+the manage.py file is used to run various django commands
+
+a python_django folder(same as the root directory)
+    settings.py is where we will declare all the project configurations
+    urls.py defines all application endpoints
+    asgi.py and wsgi.py which are asynchronous and synchronous entry points respectively
+
+ref whiteboard notes
+
+
+
+creating our own django app
+a django app is a set of features to your django project
+
+to create an app run the following command
+"peotry run python manage.py startapp app" - instead of app you can name it anything else
+
+this will create a folder called 'app' in the current directory
+    __init__py is used to define this as a python package
+    admin.py is used to link our models with django admin panel
+    models.py for models, which are objects that represent rows in our database table
+    apps.py to configur the application and be able to import it from our base django project
+    test.py for writing tests of our code
+    views.py for writing our application endpoints or the logic for the various URLs that users might access
+
+    the migrations folder for storing database migrations in case this app requires making any database changes
