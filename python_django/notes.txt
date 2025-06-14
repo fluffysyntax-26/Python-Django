@@ -24,3 +24,40 @@ this will create a folder called 'app' in the current directory
     views.py for writing our application endpoints or the logic for the various URLs that users might access
 
     the migrations folder for storing database migrations in case this app requires making any database changes
+
+
+Creating a hello world app (1st app): 
+
+created app/urls.py
+    - created a urlpatterns list 
+
+in python_django dir, added the newly created url in app/urls.py to the urlpatterns list 
+
+in the app/urls.py and project/urls.py
+
+the string from the project/urls.py -> urlspattern, newly added url will be appended with the string from the 
+app/urls.py to create url pages 
+
+app/urls.py: 
+urlpatterns = [
+    path('new', home), 
+    path('add', home), 
+    path('delete', home),
+]
+
+project/urls.py: 
+urlpatterns = [
+    path("admin/", admin.site.site) #default
+    path("users/", include("app.urls")), 
+]
+
+to access 'add' option from the webpage: 
+the new url would be "users/add"
+similarly, "users/new" and "users/delete"
+
+the strings in this case are left blank as we want it to be in the homepage
+
+next, register the django app in the settings: 
+    go to root_dir/project_name/settings.py 
+    go to installed apps (list of strings)
+    add "app.apps.Appconfig" - this corresponds to app/apps.py/AppConfig (class)
