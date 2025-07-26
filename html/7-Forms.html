@@ -1,0 +1,27 @@
+<!-- GET Requests are used to retreive data from the server, you can also include data in the URL to send data to the server
+but, the data stored in the URL is not safe, especially if it includes something sensitive. So,
+POST Requests are used to send data to the server, 
+you can hide data in the body of the POST request which is also called as the Payload -->
+
+<form> 
+    <p>
+        <label for="name">Name: </label>
+        <!-- input is an inline element and it is self closing -->
+        <!-- the name attribute in the input tag, is where the key of teh Name label is associated with, the actual value in
+        the name field will be filled instead of 'name' in the name attribute and that can be used in POST requests -->
+        <input type="Text" id="name" name="name" placeholder="Alice Wisteria" required><br>
+    </p>
+
+    <p>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+    </p>
+
+    <p>
+        <label for="password">Password: </label>
+        <input type="password" id = "password" name="password" required>
+    </p>
+
+    <button type="submit">Sign Up</button>
+  
+</form>
